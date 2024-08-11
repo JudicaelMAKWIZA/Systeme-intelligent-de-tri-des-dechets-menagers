@@ -1,4 +1,8 @@
 # Poubelle-intelligente-de-tri-des-dechets
 
--	Idée du sujet :
-Une poubelle intelligente capable de stocker, trier les déchets en fonction de leurs natures(organique, recyclable et autres) et de fournir les informations sur l’état de la poubelle afin de permettre une prise des décisions immédiates dans les conditions qui s’imposent, ces informations doivent être visualisés à l’aide d’un système quelconque (App Web, mobile, etc.). Pour l'instant, nous nous limiterons à concevoir une poubelle trieuse des déchets, les informations sur l'etat de la poubelle et l'app mobile viendront plus tard...
+## Description
+Ce projet vise à développer une poubelle intelligente capable de trier automatiquement les déchets en utilisant un modèle de classification d’image. La poubelle est équipée d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
+
+## Fonctionnalités
+- Classification d’image : Utilisation d’un modèle de machine learning pour identifier les types de déchets.
+- Tri automatique : Les déchets sont triés automatiquement en fonction de leur catégorie(organiques, recyclable et autres).
