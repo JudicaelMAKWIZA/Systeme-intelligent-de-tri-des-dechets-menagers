@@ -1,4 +1,4 @@
-# Système intelligent de tri des dechets ménagers
+# Système intelligent de tri des déchets ménagers
 
 ## Description
 Ce projet vise à développer une poubelle intelligente capable de trier automatiquement les déchets en utilisant un modèle de classification d’image. La poubelle est équipée d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
