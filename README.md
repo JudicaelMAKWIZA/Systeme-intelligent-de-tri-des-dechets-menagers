@@ -10,7 +10,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 ## Prérequis
 
 - **Python 3.x** : Télecharger et installer Python sur votre machine.
-- **Bibliothèques nécessaires** : Un script ci-dessous est prévu pour installer toutes les dépendances nécessaire.
+- **Bibliothèques nécessaires** : Une commande ci-dessous est prévue pour installer toutes les dépendances nécessaire.
 
 ## Guide d'intallation
 
