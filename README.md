@@ -9,5 +9,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 
 ## Guide d'intallation
 
-la commande ```pip install -r requirements.txt``` permet d'installer les dépendances necessaires pour ce projet
+la commande 
+```pip install -r requirements.txt``` 
+permet d'installer les dépendances necessaires pour ce projet
 
