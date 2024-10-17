@@ -10,7 +10,12 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 ## Prérequis
 
 - **Python 3.x** : Télecharger et installer Python sur votre machine.
+  
 - **Bibliothèques nécessaires** : Une commande ci-dessous est prévue pour installer toutes les dépendances nécessaire.
+  
+- **Microcontrôleur**: une Raspberry pi 3 ou plus serait l'idéal mais un microcontrôleur similaire à la Raspberry pi pourrait marcher, il suffit d'essayer pour se faire une idée.
+  
+- **Caméra**: un module caméra Raspberry V2.1, 8MP est conseillé mais vous pouvez tester les versions ultérieures pour se faire une idée.
 
 ## Guide d'installation
 
