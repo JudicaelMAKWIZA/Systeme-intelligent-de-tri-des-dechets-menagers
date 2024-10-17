@@ -6,3 +6,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 ## Fonctionnalités
 - Classification d’image : Utilisation d’un modèle de machine learning pour identifier les types de déchets.
 - Tri automatique : Les déchets sont triés automatiquement en fonction de leur catégorie(organiques, recyclable et autres).
+
+## Guide d'intallation
+
+la commande : pip install -r requirements.txt permet d'installer les dépendances necessaires pour ce projet
