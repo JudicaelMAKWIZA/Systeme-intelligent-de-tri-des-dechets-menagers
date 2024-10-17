@@ -1,7 +1,7 @@
 # Système intelligent de tri des déchets ménagers
 
 ## Description
-Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un modèle de classification d’image. Le système est équipé d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
+Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un modèle de classification d’image. Le système est équipé d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories(organique, plastique et autres(papier, carton, verre et métal).
 
 ## Fonctionnalités
 - Classification d’image : Utilisation d’un modèle de machine learning pour identifier les types de déchets.
@@ -12,7 +12,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 - **Python 3.x** : Télecharger et installer Python sur votre machine.
 - **Bibliothèques nécessaires** : Une commande ci-dessous est prévue pour installer toutes les dépendances nécessaire.
 
-## Guide d'intallation
+## Guide d'installation
 
 la commande ci dessous permet d'installer toutes les dépendances nécessaires pour ce projet :
 
