@@ -13,7 +13,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
   
 - **Bibliothèques nécessaires** : Une commande ci-dessous est prévue pour installer toutes les dépendances nécessaire.
   
-- **Microcontrôleur**: une Raspberry pi 3 ou plus serait l'idéal mais un microcontrôleur similaire à la Raspberry pi pourrait marcher, il suffit d'essayer pour se faire une idée.
+- **Microcontrôleur**: une Raspberry pi 3 ou plus serait l'idéal mais un microcontrôleur similaire à la Raspberry pi pourrait fonctionner, il suffit d'essayer pour se faire une idée.
   
 - **Caméra**: un module caméra Raspberry V2.1, 8MP est conseillé mais vous pouvez tester les versions ultérieures pour se faire une idée.
 
