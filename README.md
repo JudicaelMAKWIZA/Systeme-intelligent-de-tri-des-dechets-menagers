@@ -11,7 +11,7 @@ Ce projet vise à développer un système intelligent capable de trier automatiq
 
 - **Python 3.x** : Télecharger et installer Python sur votre machine.
   
-- **Bibliothèques nécessaires** : Une commande ci-dessous est prévue pour installer toutes les dépendances nécessaire.
+- **Bibliothèques nécessaires** : la commande ci-dessous dans le guide d'installation permet d'installer toutes les dépendances nécessaire.
   
 - **Microcontrôleur**: une Raspberry pi 3 ou plus serait l'idéal mais un microcontrôleur similaire à la Raspberry pi pourrait fonctionner, il suffit d'essayer pour se faire une idée.
   
