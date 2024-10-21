@@ -1,8 +1,9 @@
 import cv2
 import numpy as np
 from skimage.metrics import structural_similarity as ssim
+import os
 
-def comparer_images(image1_path, image2_path, seuil_similarite=0.9):
+def comparer_images(image1_path, image2_path, similarity_count):
     # Charger les deux images
     image1 = cv2.imread(image1_path)
     image2 = cv2.imread(image2_path)
@@ -10,7 +11,7 @@ def comparer_images(image1_path, image2_path, seuil_similarite=0.9):
     # Vérifier que les images ont été correctement chargées
     if image1 is None or image2 is None:
         print("Erreur lors du chargement des images. Vérifiez les chemins.")
-        return
+        return 0, similarity_count, True  # Continuer le système
 
     # Convertir les images en niveaux de gris
     gris1 = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
@@ -21,21 +22,28 @@ def comparer_images(image1_path, image2_path, seuil_similarite=0.9):
     flou2 = cv2.GaussianBlur(gris2, (5, 5), 0)
 
     # Calculer l'indice de similarité structurelle (SSIM)
-    score, diff = ssim(flou1, flou2, full=True)
-    diff = (diff * 255).astype("uint8")  # Conversion en image d'échelle de gris
+    score, _ = ssim(flou1, flou2, full=True)
 
-    # Binariser l'image de différence pour mieux visualiser les variations
-    _, diff_binaire = cv2.threshold(diff, 30, 255, cv2.THRESH_BINARY)
+    # Binarisation de l'image de différence
+    difference = cv2.absdiff(gris1, gris2)
+    _, binarized_diff = cv2.threshold(difference, 30, 255, cv2.THRESH_BINARY)
 
-    # Calculer le pourcentage de différence (seuils ajustables selon les besoins)
-    pourcentage_diff = np.sum(diff_binaire > 0) / diff_binaire.size * 100
+    # Calculer le pourcentage de différence
+    total_pixels = binarized_diff.size
+    different_pixels = np.count_nonzero(binarized_diff)
+    percentage_difference = (different_pixels / total_pixels) * 100
 
-    # Afficher le score et le pourcentage de différence
-    print(f"Score de similarité (SSIM): {score:.4f}")
-    print(f"Pourcentage de différence: {pourcentage_diff:.2f}%")
-
-    # Afficher les résultats de comparaison
-    if score >= seuil_similarite:
-        print("Les images sont similaires.")
+    # Logique de comparaison
+    if score >= 0.9:  # Seuil de similarité
+        print("Les images sont identiques.")
+        print(f"Pourcentage de différence : {percentage_difference:.2f}%")
+        os.remove(image1_path)  # Supprimer la première image
+        os.remove(image2_path)  # Supprimer la deuxième image
+        return score, similarity_count, False  # Arrêter le système
     else:
         print("Les images sont différentes.")
+        print(f"Pourcentage de différence : {percentage_difference:.2f}%")
+        similarity_count = 0  # Réinitialiser le compteur
+        os.remove(image1_path)  # Supprimer la première image
+        os.rename(image2_path, image1_path)  # Renommer la deuxième image
+        return score, similarity_count, True  # Continuer le système
