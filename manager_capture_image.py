@@ -39,4 +39,4 @@ class ImageCaptureSystem:
         """Traite les images capturées."""
         time.sleep(3)
         print("Début de la comparaison des images...")
-        score, self.similarity_count, continue_system = comparer_images(self.initial_image_path, self.final_image_path, self.similarity_count)
+        score, self.final_image_path, continue_system = comparer_images(self.initial_image_path, self.final_image_path, self.similarity_count)

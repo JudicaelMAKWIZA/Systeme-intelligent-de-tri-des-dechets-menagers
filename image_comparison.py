@@ -39,11 +39,12 @@ def comparer_images(image1_path, image2_path, similarity_count):
         print(f"Pourcentage de différence : {percentage_difference:.2f}%")
         os.remove(image1_path)  # Supprimer la première image
         os.remove(image2_path)  # Supprimer la deuxième image
-        return score, similarity_count, False  # Arrêter le système
+        return score, similarity_count, False   #, None # Arrêter le système
     else:
         print("Les images sont différentes.")
         print(f"Pourcentage de différence : {percentage_difference:.2f}%")
         similarity_count = 0  # Réinitialiser le compteur
         os.remove(image1_path)  # Supprimer la première image
-        os.rename(image2_path, image1_path)  # Renommer la deuxième image
-        return score, similarity_count, True  # Continuer le système
+        os.rename(image2_path, image2_path)  # Renommer la deuxième image
+        return score, image2_path, True  # Continuer le système
+
